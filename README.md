@@ -24,4 +24,4 @@ Data is stored in localStorage which means that when the browser is refreshed it
 
 5) Type code . to open this project in VScode
 
-6) then if you haven't installed Live Server extension install it and open the project
+6) If you haven't installed Live Server extension install it and open the project
