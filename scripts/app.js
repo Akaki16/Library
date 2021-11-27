@@ -153,12 +153,10 @@ class BookStore {
 
     static searchBook() {
         const books = BookStore.getBooks();
-        const userInput = document.getElementById('search_book').value;
-        let words = userInput.split(' ');
-        words = words.join('');
+        const userInput = document.getElementById('search_book').value.toLowerCase();
         books.forEach((book) => {
             let searchedBookName = book.name.toLowerCase();
-            if (words === searchedBookName) {
+            if (userInput === searchedBookName) {
                 // open book modal after 3 milliseconds
                 setTimeout(() => {
                     Modal.open('modal2');
@@ -217,9 +215,9 @@ document.getElementById('add-form').addEventListener('submit', e => {
         UI.showMessage('msg3', '', '');
 
         const book = new Book(
-            bookName.value.split(' ').join(''),
-            bookAuthor.value.split(' ').join(''),
-            bookPages.value.split(' ').join(''),
+            bookName.value,
+            bookAuthor.value,
+            bookPages.value
         );
 
         // show book list
