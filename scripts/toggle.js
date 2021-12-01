@@ -42,22 +42,6 @@ class StateValue {
     }
 }
 
-// activate dark mode
-document.getElementById('dark-icon').addEventListener('click', e => {
-    const color = new Color('333');
-
-    UI.setAppBgColor(color.color);
-
-    UI.setAppTextColor('fff');
-
-    StateValue.addBgColor(color.color);
-
-    StateValue.addTextColor('fff');
-
-    document.querySelector('.icon-area').innerHTML = `<i id="light-icon" data-color="fff" class="fas fa-sun fa-2x light-theme-icon"></i>`;
-
-});
-
 // toggling mode functionality
 document.querySelector('.icon-area').addEventListener('click', e => {
     const element = e.target.classList;
