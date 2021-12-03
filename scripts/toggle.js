@@ -28,10 +28,10 @@ class StateValue {
         }
         return textColor;
     }
-    
+
     static getToggleIcon() {
         let toggleIcon;
-        let defaultIcon = `<i class="fas fa-moon fa-2x dark"></i>`;
+        let defaultIcon = `<i id="dark-icon" data-color="000" class="fas fa-moon fa-2x dark-theme-icon"></i>`;
         if (!localStorage.getItem('toggleicon')) {
             toggleIcon = defaultIcon;
         } else {
@@ -39,7 +39,7 @@ class StateValue {
         }
         return toggleIcon;
     }
-    
+
     static addBgColor(color) {
         let bgColor = StateValue.getBgColor();
         bgColor = color;
@@ -51,11 +51,11 @@ class StateValue {
         textColor = color;
         localStorage.setItem('textcolor', textColor);
     }
-    
+
     static addToggleIcon(icon) {
         let toggleIcon = StateValue.getToggleIcon();
         toggleIcon = icon;
-        localStorage.setItem('toggleicon', icon);
+        localStorage.setItem('toggleicon', toggleIcon);
     }
 }
 
@@ -75,7 +75,7 @@ document.querySelector('.icon-area').addEventListener('click', e => {
 
         UI.setAppToggleIcon(`<i id="dark-icon" data-color="000" class="fas fa-moon fa-2x dark-theme-icon"></i>`);
         
-        StateValue.addToggleIcon(`<i class="fas fa-moon fa-2x dark"></i>`);
+        StateValue.addToggleIcon(`<i id="dark-icon" data-color="000" class="fas fa-moon fa-2x dark-theme-icon"></i>`);
 
     } else if (element.contains('dark-theme-icon')) {
         const color = new Color('333');

@@ -95,10 +95,10 @@ class UI {
     static setAppToggleIcon(icon) {
         document.querySelector('.icon-area').innerHTML = icon;   
     }
-    
+
     static displayAppToggleIcon() {
-       const toggleIcon = StateValue.getToggleIcon();
-       document.querySelector('.icon-area').innerHTML = toggleIcon;
+        const toggleIcon = StateValue.getToggleIcon();
+        document.querySelector('.icon-area').innerHTML = toggleIcon;
     }
 
     static closeModal() {
