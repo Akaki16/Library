@@ -28,7 +28,18 @@ class StateValue {
         }
         return textColor;
     }
-
+    
+    static getToggleIcon() {
+        let toggleIcon;
+        let defaultIcon = `<i class="fas fa-moon fa-2x dark"></i>`;
+        if (!localStorage.getItem('toggleicon')) {
+            toggleIcon = defaultIcon;
+        } else {
+            toggleIcon = localStorage.getItem('toggleicon');
+        }
+        return toggleIcon;
+    }
+    
     static addBgColor(color) {
         let bgColor = StateValue.getBgColor();
         bgColor = color;
@@ -39,6 +50,12 @@ class StateValue {
         let textColor = StateValue.getTextColor();
         textColor = color;
         localStorage.setItem('textcolor', textColor);
+    }
+    
+    static addToggleIcon(icon) {
+        let toggleIcon = StateValue.getToggleIcon();
+        toggleIcon = icon;
+        localStorage.setItem('toggleicon', icon);
     }
 }
 
