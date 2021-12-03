@@ -263,6 +263,7 @@ document.querySelector('.search-book').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     UI.displayAppBgColor();
     UI.displayAppTextColor();
+    UI.displayAppToggleIcon();
     UI.renderBooks();
 });
 
