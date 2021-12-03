@@ -91,6 +91,15 @@ class UI {
         const textColor = StateValue.getTextColor();
         document.body.style.color = '#' + textColor;
     }
+    
+    static setAppToggleIcon(icon) {
+        document.querySelector('.icon-area').innerHTML = icon;   
+    }
+    
+    static displayAppToggleIcon() {
+       const toggleIcon = StateValue.getToggleIcon();
+       document.querySelector('.icon-area').innerHTML = toggleIcon;
+    }
 
     static closeModal() {
         // close adding book modal
