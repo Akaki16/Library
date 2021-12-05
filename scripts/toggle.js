@@ -73,9 +73,9 @@ document.querySelector('.icon-area').addEventListener('click', e => {
 
         StateValue.addTextColor('333');
 
-        UI.setAppToggleIcon(`<i id="dark-icon" data-color="000" class="fas fa-moon fa-2x dark"></i>`);
+        UI.setAppToggleIcon(`<i id="dark-icon" data-color="000" class="fas fa-moon fa-2x d-icon"></i>`);
         
-        StateValue.addToggleIcon(`<i id="dark-icon" data-color="000" class="fas fa-moon fa-2x dark"></i>`);
+        StateValue.addToggleIcon(`<i id="dark-icon" data-color="000" class="fas fa-moon fa-2x d-icon"></i>`);
 
     } else if (element.contains('d-icon')) {
         const color = new Color('333');
