@@ -62,7 +62,7 @@ class StateValue {
 // toggling mode functionality
 document.querySelector('.icon-area').addEventListener('click', e => {
     const element = e.target.classList;
-    if (element.contains('light-theme-icon')) {
+    if (element.contains('light')) {
         const color = new Color('fff');
 
         UI.setAppBgColor(color.color);
@@ -77,7 +77,7 @@ document.querySelector('.icon-area').addEventListener('click', e => {
         
         StateValue.addToggleIcon(`<i id="dark-icon" data-color="000" class="fas fa-moon fa-2x dark"></i>`);
 
-    } else if (element.contains('dark-theme-icon')) {
+    } else if (element.contains('dark')) {
         const color = new Color('333');
 
         UI.setAppBgColor(color.color);
