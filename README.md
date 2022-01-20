@@ -10,6 +10,8 @@ Also users can toggle between light/dark themes
 
 Data is stored in localStorage which means that when the browser is refreshed it's not lost
 
+[live demo](https://akaki16.github.io/Library/)
+
 ### Running documentation
 
 #### Steps
